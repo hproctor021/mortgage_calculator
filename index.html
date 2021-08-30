@@ -22,9 +22,65 @@
 
     <body>
         <div id="loan-container">
-            <div class="heading bold">Calculate Your Loan:</div>
+            <div id="info-pane" class="box-pane">
+                <div class="heading bold">Calculate Your Loan:</div>
+                <div class="row-input">
+                    <label>Enter Loan Term:</label>
+                    <div class="input-wrap">
+                        <div class="currency">$</div>
+                        <input type="text" type="number" id="txtLoan" value="0" />
+                    </div>
+                </div>
+                <div class="row-input">
+                    <label>Enter APR:</label>
+                    <div class="input-wrap">
+                        <div class="percentage">%</div>
+                        <input type="text" type="number" id="txtInterest" value="3.84" maxlength="5" class="short-input" />
+                    </div>
+                </div>
+                <div class="row-input">
+                    <label>How many years would you like the loan?</label>
+                    <div id="yearRange" class="range-slider"></div>
+                </div>
+                <!-- <div class="row-input">
+                    <label>How often will you be making payments?</label>
+                    <ul class="ul-buttons">
+                        <li class="selected" data-value="1">Monthly</li>
+                        <li data-value="2">BiWeekly</li>
+                    </ul>
+                </div> -->
+            </div>
         </div>
-
+        <div id="graph" class="box-pane">
+            <div id="repayment-total">
+                <div class="heading bold">Total Interest:</div>
+                <div id="repayment-total-value" class="loan-value">
+                    $<span id="interest-total">
+                        0
+                    </span>over
+                    <span class="orange-text">
+                        <span id="year-value">
+                            5
+                        </span>
+                        years
+                    </span>
+                </div>
+            </div>
+            <div id="repayment-cycle">
+                <div class="heading bold">Payment:</div>
+                <div id="repayment-cycle-value" class="loan-value">
+                    $<span id="repayment-value">
+                        0
+                    </span>
+                     per 
+                    <span class="orange-text">
+                        month
+                    </span>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="graph-chart"></div>
+        </div>
         <script src="index.js"></script>
     </body>
 
